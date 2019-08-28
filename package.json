@@ -2,6 +2,12 @@
 	"name": "fcc-learn-npm-package-json",
 	"author": "Suchith J N",
 	"description": "Project to complete FreeCodeCamp backend tasks",
+	"keywords": [
+		"backend",
+		"node",
+		"freecodecamp",
+		"javascript"
+	],
 	"dependencies": {
 		"express": "^4.14.0"
 	},
