@@ -40,6 +40,10 @@ app.get('/name', function (req, res) {
   })
 });
 
+app.post('/body', function (req, res) {
+  res.json(req.body);
+});
+
 app.listen(PORT, function () {
   console.log(`Node.js listening on ${PORT}...`);
 });
