@@ -5,6 +5,8 @@ var app = express();
 
 var PORT = process.env.PORT || 6666;
 
+app.use('/public', express.static(__dirname + '/public'));
+
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/views/index.html')
 });
