@@ -31,6 +31,13 @@ app.get('/:word/echo', function (req, res) {
   res.json({ echo: req.params['word'] });
 });
 
+app.get('/name', function (req, res) {
+  res.json({
+    firstname: req.query['first'],
+    lastname: req.query['last'],
+  })
+});
+
 app.listen(PORT, function () {
   console.log(`Node.js listening on ${PORT}...`);
 });
