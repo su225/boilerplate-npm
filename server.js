@@ -20,6 +20,13 @@ app.get('/json', function (req, res) {
   res.json({ message: "Hello express" });
 });
 
+app.get('/now', function (req, res, next) {
+  req.time = new Date().toString();
+  next();
+}, function (req, res) {
+  res.json({ time: req.time });
+});
+
 app.listen(PORT, function () {
   console.log(`Node.js listening on ${PORT}...`);
 });
