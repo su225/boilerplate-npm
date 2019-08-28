@@ -6,7 +6,7 @@ var app = express();
 var PORT = process.env.PORT || 6666;
 
 app.get('/', function (req, res) {
-  res.type('txt').send('Hello Express\n');
+  res.sendFile(__dirname + '/views/index.html')
 });
 
 app.listen(PORT, function () {
