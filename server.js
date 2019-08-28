@@ -7,7 +7,7 @@ var app = express();
 var PORT = process.env.PORT || 6666;
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/', function (req, res, next) {
+app.use(function (req, res, next) {
   console.log(`${req.method} ${req.url} - ${req.ip}`);
   next();
 });
